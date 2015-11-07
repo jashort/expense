@@ -44,6 +44,22 @@ public class Expense {
         this.cost = new BigDecimal(cost);
     }
 
+    public Integer getYear() {
+        if (this.date != null) {
+            return this.date.getYear();
+        } else {
+            return null;
+        }
+    }
+
+    public Integer getMonth() {
+        if (this.date != null) {
+            return this.date.getMonthValue();
+        } else {
+            return null;
+        }
+    }
+
     public String toString() {
         return String.format("%s\t%s\t%s\t%s", getFormattedDate(), getCategory(), getDescription(), getFormattedCost());
     }
